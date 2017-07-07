@@ -95,6 +95,8 @@ class MyFragment extends Fragment{
 
     public static String TAG = "DSMmeal";
 
+    private View saveView = null;
+
 
     private String curruntStrDate;
     private TextView breakfast, lunch, dinner;
@@ -148,7 +150,6 @@ class MyFragment extends Fragment{
         }catch(Exception e){
             Log.d(TAG, "strToArray: " + e.getMessage());
             return "오류가 발생했습니다";
-
         }
 
     }
@@ -156,34 +157,32 @@ class MyFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_card, container,false);
-        breakfast = (TextView) view.findViewById(R.id.breakfastText);
-        lunch = (TextView) view.findViewById(R.id.lunchText);
-        dinner = (TextView) view.findViewById(R.id.dinnerText);
-        day = (TextView) view.findViewById(R.id.dayText);
-        month = (TextView) view.findViewById(R.id.monthText);
-        year = (TextView) view.findViewById(R.id.yearText);
+        if(saveView == null){
+            View view = inflater.inflate(R.layout.fragment_card, container,false);
+            breakfast = (TextView) view.findViewById(R.id.breakfastText);
+            lunch = (TextView) view.findViewById(R.id.lunchText);
+            dinner = (TextView) view.findViewById(R.id.dinnerText);
+            day = (TextView) view.findViewById(R.id.dayText);
+            month = (TextView) view.findViewById(R.id.monthText);
+            year = (TextView) view.findViewById(R.id.yearText);
 
-        breakfast.setText(breakfastText);
-        lunch.setText(lunchText);
-        dinner.setText(dinnerText);
-
-
-        try{
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-            Date curruntDate = simpleDateFormat.parse(curruntStrDate);
-            simpleDateFormat.applyPattern("yyyy");
-            year.setText(simpleDateFormat.format(curruntDate));
-            simpleDateFormat.applyPattern("MMMM");
-            month.setText(simpleDateFormat.format(curruntDate));
-            simpleDateFormat.applyPattern("dd");
-            day.setText(simpleDateFormat.format(curruntDate));
-        }catch (Exception e){
-            Log.d(TAG, "MyFragment: "+ e.getMessage());
+            try{
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                Date curruntDate = simpleDateFormat.parse(curruntStrDate);
+                simpleDateFormat.applyPattern("yyyy");
+                year.setText(simpleDateFormat.format(curruntDate));
+                simpleDateFormat.applyPattern("MMMM");
+                month.setText(simpleDateFormat.format(curruntDate));
+                simpleDateFormat.applyPattern("dd");
+                day.setText(simpleDateFormat.format(curruntDate));
+            }catch (Exception e){
+                Log.d(TAG, "MyFragment: "+ e.getMessage());
+            }
+            saveView = view;
+            return view;
+        }else{
+            return saveView;
         }
-
-
-        return view;
     }
 
 

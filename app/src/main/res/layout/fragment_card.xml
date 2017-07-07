@@ -22,7 +22,7 @@
                 app:scale_base_width="280">
                 <TextView
                     app:scale_width="35"
-                    app:scale_height="15"
+                    app:scale_height="20"
                     app:scale_left="230"
                     app:scale_top="15"
                     app:scale_textsize="15"
