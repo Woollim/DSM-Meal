@@ -130,10 +130,6 @@ class MyFragment extends Fragment{
         });
     }
 
-    private void setDate(){
-
-    }
-
     private String strToArray(String object) {
         try{
             String sendStr = "";

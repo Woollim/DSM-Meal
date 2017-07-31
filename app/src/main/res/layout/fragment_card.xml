@@ -15,147 +15,158 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <com.ssomai.android.scalablelayout.ScalableLayout
+            <TextView
+                android:id="@+id/dayText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="50sp"
+                android:text="03"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="32dp"/>
+
+            <TextView
+                android:id="@+id/monthText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:text="9월"
+                android:layout_marginLeft="4dp"
+                android:layout_marginBottom="8dp"
+                android:layout_alignBottom="@id/dayText"
+                android:layout_toRightOf="@id/dayText"/>
+
+            <TextView
+                android:id="@+id/yearText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:text="2000"
+                android:layout_margin="16dp"
+                android:layout_alignParentRight="true"/>
+
+            <LinearLayout
+                android:layout_below="@id/dayText"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:scale_base_height="400"
-                app:scale_base_width="280">
-                <TextView
-                    app:scale_width="35"
-                    app:scale_height="20"
-                    app:scale_left="230"
-                    app:scale_top="15"
-                    app:scale_textsize="15"
-                    android:id="@+id/yearText"
-                    android:layout_alignParentRight="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="2017"
-                    android:textColor="#BDBDBD"/>
+                android:layout_height="match_parent">
 
-                <TextView
-                    app:scale_width="50"
-                    app:scale_height="40"
-                    app:scale_left="30"
-                    app:scale_top="25"
-                    app:scale_textsize="40"
-                    android:id="@+id/dayText"
-                    android:text="06"
-                    android:textSize="45sp"
-                    android:textColor="#BDBDBD"
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    />
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
 
-                <TextView
-                    app:scale_width="50"
-                    app:scale_height="20"
-                    app:scale_left="80"
-                    app:scale_top="45"
-                    app:scale_textsize="15"
-                    android:id="@+id/monthText"
-                    android:text="월요일"
-                    android:textColor="#BDBDBD"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                <TextView
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="8dp"
+                            android:layout_height="25dp"
+                            android:background="#000"/>
+
+                        <TextView
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="아침"
+                            android:textSize="20sp"
+                            android:layout_alignBottom="@id/view1"
+                            android:layout_toRightOf="@id/view1"/>
+
+                        <TextView
+                            android:id="@+id/breakfastText"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginLeft="60dp"
+                            android:layout_marginRight="32dp"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/view1"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#A7FFEB"
-                    app:scale_width="5"
-                    app:scale_height="20"
-                    app:scale_left="20"
-                    app:scale_top="90"/>
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
 
-                <TextView
-                    android:text="아침"
-                    app:scale_textsize="15"
-                    app:scale_width="30"
-                    app:scale_height="20"
-                    app:scale_left="35"
-                    app:scale_top="91"
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="8dp"
+                            android:layout_height="25dp"
+                            android:background="#000"/>
+
+                        <TextView
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="점심"
+                            android:textSize="20sp"
+                            android:layout_alignBottom="@id/view2"
+                            android:layout_toRightOf="@id/view2"/>
+
+                        <TextView
+                            android:textSize="16sp"
+                            android:id="@+id/lunchText"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginLeft="60dp"
+                            android:layout_marginRight="32dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/view2"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    />
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/breakfastText"
-                    app:scale_textsize="13"
-                    app:scale_width="220"
-                    app:scale_height="70"
-                    app:scale_left="35"
-                    app:scale_top="120"
-                    android:text="정보를 불러오고 있습니다"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#A7FFEB"
-                    app:scale_width="5"
-                    app:scale_height="20"
-                    app:scale_left="20"
-                    app:scale_top="195"/>
+                        <View
+                            android:id="@+id/view3"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="8dp"
+                            android:layout_height="25dp"
+                            android:background="#000"/>
 
-                <TextView
-                    android:text="점심"
-                    app:scale_textsize="15"
-                    app:scale_width="30"
-                    app:scale_height="20"
-                    app:scale_left="35"
-                    app:scale_top="196"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    />
+                        <TextView
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="저녁"
+                            android:textSize="20sp"
+                            android:layout_alignBottom="@id/view3"
+                            android:layout_toRightOf="@id/view3"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/lunchText"
-                    app:scale_textsize="13"
-                    app:scale_width="220"
-                    app:scale_height="70"
-                    app:scale_left="35"
-                    app:scale_top="226"
-                    android:text="정보를 불러오고 있습니다"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#A7FFEB"
-                    app:scale_width="5"
-                    app:scale_height="20"
-                    app:scale_left="20"
-                    app:scale_top="300"/>
-
-                <TextView
-                    android:text="저녁"
-                    app:scale_textsize="15"
-                    app:scale_width="30"
-                    app:scale_height="20"
-                    app:scale_left="35"
-                    app:scale_top="301"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/dinnerText"
-                    app:scale_textsize="13"
-                    app:scale_width="220"
-                    app:scale_height="60"
-                    app:scale_left="35"
-                    app:scale_top="330"
-                    android:text="정보를 불러오고 있습니다"/>
+                        <TextView
+                            android:textSize="16sp"
+                            android:id="@+id/dinnerText"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginLeft="60dp"
+                            android:layout_marginRight="32dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/view3"/>
+                    </RelativeLayout>
+                </LinearLayout>
 
 
-
-            </com.ssomai.android.scalablelayout.ScalableLayout>
+            </LinearLayout>
 
             <ImageView
                 android:layout_alignParentBottom="true"
