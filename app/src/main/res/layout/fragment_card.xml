@@ -45,6 +45,7 @@
                 android:layout_alignParentRight="true"/>
 
             <LinearLayout
+                android:layout_marginTop="16dp"
                 android:layout_below="@id/dayText"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
@@ -66,7 +67,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_width="8dp"
                             android:layout_height="25dp"
-                            android:background="#000"/>
+                            android:background="@color/mint"/>
 
                         <TextView
                             android:layout_marginLeft="10dp"
@@ -80,7 +81,7 @@
                         <TextView
                             android:id="@+id/breakfastText"
                             android:layout_marginTop="8dp"
-                            android:layout_marginLeft="60dp"
+                            android:layout_marginLeft="50dp"
                             android:layout_marginRight="32dp"
                             android:textSize="16sp"
                             android:layout_width="match_parent"
@@ -104,7 +105,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_width="8dp"
                             android:layout_height="25dp"
-                            android:background="#000"/>
+                            android:background="@color/mint"/>
 
                         <TextView
                             android:layout_marginLeft="10dp"
@@ -119,7 +120,7 @@
                             android:textSize="16sp"
                             android:id="@+id/lunchText"
                             android:layout_marginTop="8dp"
-                            android:layout_marginLeft="60dp"
+                            android:layout_marginLeft="50dp"
                             android:layout_marginRight="32dp"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -142,7 +143,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_width="8dp"
                             android:layout_height="25dp"
-                            android:background="#000"/>
+                            android:background="@color/mint"/>
 
                         <TextView
                             android:layout_marginLeft="10dp"
@@ -157,7 +158,7 @@
                             android:textSize="16sp"
                             android:id="@+id/dinnerText"
                             android:layout_marginTop="8dp"
-                            android:layout_marginLeft="60dp"
+                            android:layout_marginLeft="50dp"
                             android:layout_marginRight="32dp"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
